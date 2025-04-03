@@ -1,0 +1,67 @@
+.custom_header_shadow {
+  backdrop-filter: blur(24.997100830078125px);
+  box-shadow: 0px 2px 83.99px 0px rgba(0, 0, 0, 0.02) inset,
+    /* Shadow 1 */ -9px 20px 59.99px -24px rgba(0, 0, 0, 0.05),
+    /* Shadow 2 */ 1px -1px 0px 0px rgba(255, 255, 255, 1),
+    /* Shadow 3 */ -1px 1px 0px 0px rgba(240, 240, 240, 1); /* Shadow 4 */
+}
+
+/* Keyframes cho hiệu ứng xổ xuống */
+@keyframes dropdownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Áp dụng animation vào dropdown */
+.group:hover .dropdown {
+  display: block;
+  animation: dropdownFade 0.3s ease-out;
+}
+
+.dropdown {
+  display: none; /* Ẩn dropdown khi không hover */
+  background-color: white;
+  border: 1px solid #e5e7eb; /* Tailwind border-gray-200 */
+  border-radius: 0.375rem; /* Tailwind rounded */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Tailwind shadow-md */
+  margin-top: 0.25rem; /* Tailwind mt-1 */
+  width: 10rem; /* Tailwind w-40 */
+}
+
+@keyframes dropdownMobile {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-dropdown {
+  animation: dropdownMobile 0.3s ease-out;
+}
+
+.custom_button {
+  display: border-box;
+  background: rgba(26, 213, 152, 1);
+  border: 1px solid;
+
+  border-image-source: radial-gradient(
+    50% 93.75% at 50% 6.25%,
+    #a3eed6 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+header {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease-in-out;
+}
