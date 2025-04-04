@@ -7,8 +7,13 @@ import clsx from "clsx";
 export default function Header() {
   const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [offset, setOffset] = useState(0);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      setOffset(-window.innerHeight / 2); // 👈 lấy chiều cao sau khi mounted
+    }
+
     let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
@@ -37,7 +42,7 @@ export default function Header() {
           to="home"
           smooth={true}
           duration={500}
-          offset={-window.innerHeight / 2}
+          offset={offset}
           className="cursor-pointer"
         >
           <span className="text-4xl font-bold text-blue-600 font-base">
@@ -49,7 +54,7 @@ export default function Header() {
             to="home"
             smooth={true}
             duration={500}
-            offset={-window.innerHeight / 2}
+            offset={offset}
             className="cursor-pointer text-body-primary text-gray-700 hover:text-blue-600 body-large-medium"
           >
             Trang chủ
@@ -58,7 +63,7 @@ export default function Header() {
             to="features"
             smooth={true}
             duration={500}
-            offset={-window.innerHeight / 2}
+            offset={offset}
             className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium"
           >
             Tính năng
@@ -67,7 +72,7 @@ export default function Header() {
             to="guide"
             smooth={true}
             duration={500}
-            offset={-window.innerHeight / 2}
+            offset={offset}
             className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium"
           >
             Hướng dẫn
@@ -76,7 +81,7 @@ export default function Header() {
             to="about"
             smooth={true}
             duration={500}
-            offset={-window.innerHeight / 2}
+            offset={offset}
             className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium"
           >
             Liên hệ
@@ -96,7 +101,7 @@ export default function Header() {
             to="home"
             smooth={true}
             duration={500}
-            offset={-window.innerHeight / 2}
+            offset={offset}
             className="cursor-pointer text-gray-700 hover:text-blue-600"
             onClick={() => setMenuOpen(false)}
           >
@@ -106,7 +111,7 @@ export default function Header() {
             to="features"
             smooth={true}
             duration={500}
-            offset={-window.innerHeight / 2}
+            offset={offset}
             className="cursor-pointer text-gray-700 hover:text-blue-600"
             onClick={() => setMenuOpen(false)}
           >
@@ -116,7 +121,7 @@ export default function Header() {
             to="guide"
             smooth={true}
             duration={500}
-            offset={-window.innerHeight / 2}
+            offset={offset}
             className="cursor-pointer text-gray-700 hover:text-blue-600"
             onClick={() => setMenuOpen(false)}
           >
@@ -126,7 +131,7 @@ export default function Header() {
             to="about"
             smooth={true}
             duration={500}
-            offset={-window.innerHeight / 2}
+            offset={offset}
             className="cursor-pointer text-gray-700 hover:text-blue-600"
             onClick={() => setMenuOpen(false)}
           >
