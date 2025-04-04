@@ -60,7 +60,6 @@ const TopBanner = () => {
               to="guide"
               smooth={true}
               duration={500}
-              offset={-window.innerHeight / 2}
               className="cursor-pointer"
             >
               Hướng dẫn
