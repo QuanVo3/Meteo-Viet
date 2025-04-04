@@ -20,7 +20,7 @@ const TextReveal: React.FC<TextRevealProps> = ({ children, className }) => {
 
   return (
     <div className={`inline-flex overflow-hidden ${className}`}>
-      {children.split(" ").map((word, index) => (
+      {typeof children === "string" && children.split(" ").map((word, index: number) => (
         <motion.span
           key={index}
           custom={index}
