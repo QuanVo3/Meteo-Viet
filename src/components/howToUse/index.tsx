@@ -11,7 +11,7 @@ const steps = [
   },
   {
     image: Allow,
-    text: "Bước 2: Chọn khu vực, cài đặt thông báo thời tiết",
+    text: "Bước 2: Cho phép truy cập vị trí",
   },
   {
     image: Info,
