@@ -51,7 +51,6 @@ const TopBanner = () => {
               smooth={true}
               duration={500}
               className="cursor-pointer "
-              offset={-window.innerHeight / 2}
             >
               Tính năng
             </Link>
