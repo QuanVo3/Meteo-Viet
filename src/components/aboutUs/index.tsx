@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-
-import { FaFacebookF, FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaFacebookF, FaEnvelope, FaPhone, FaYoutube } from "react-icons/fa";
 
 const AboutUsCTA = () => {
   return (
@@ -20,18 +19,25 @@ const AboutUsCTA = () => {
       {/* Phần dưới - Liên kết */}
       <div className="flex flex-col items-center gap-4">
         <div className="flex gap-4">
+          {/* Nút email - mở Gmail */}
           <a
-            href="mailto:support@meteoviet.vn"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=meteoviet@gmail.com"
             className="text-blue-600 text-xl p-2 rounded-full border border-blue-600 hover:bg-blue-600 hover:text-white transition"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaEnvelope />
           </a>
+
+          {/* Nút gọi điện - chỉ hiển thị trên mobile */}
           <a
-            href="tel:0123456789"
-            className="text-blue-600 text-xl p-2 rounded-full border border-blue-600 hover:bg-blue-600 hover:text-white transition"
+            href="tel:0965001777"
+            className="block md:hidden text-blue-600 text-xl p-2 rounded-full border border-blue-600 hover:bg-blue-600 hover:text-white transition"
           >
             <FaPhone />
           </a>
+
+          {/* Facebook */}
           <a
             href="https://facebook.com/MeteoViet"
             className="text-blue-600 text-xl p-2 rounded-full border border-blue-600 hover:bg-blue-600 hover:text-white transition"
@@ -40,8 +46,24 @@ const AboutUsCTA = () => {
           >
             <FaFacebookF />
           </a>
+
+          {/* YouTube */}
+          <a
+            href="https://www.youtube.com/@MeteoViet"
+            className="text-blue-600 text-xl p-2 rounded-full border border-blue-600 hover:bg-blue-600 hover:text-white transition"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaYoutube />
+          </a>
         </div>
 
+        {/* Dòng số điện thoại - chỉ hiển thị trên desktop */}
+        <p className="hidden md:block text-body-primary body-small-regular">
+          ☎️ Tel: <strong>0965 001 777</strong>
+        </p>
+
+        {/* Mô tả */}
         <p className="text-gray-700 text-sm text-center max-w-md">
           🌍 <strong>MeteoViet</strong> – Công nghệ dự báo thời tiết dành riêng
           cho người Việt!
