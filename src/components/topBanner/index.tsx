@@ -23,39 +23,50 @@ const TopBanner = () => {
     <div className="w-full max-w-screen-xl mx-auto flex flex-col md:flex-row items-center p-6 relative">
       {/* Background for Mobile */}
       <div
-        className="absolute inset-0 md:hidden bg-cover bg-center opacity-20 aspect-[1768/2504] w-full"
+        className=" aspect-[2860/5632] w-1/2 md:hidden relative z-20"
+        data-aos="fade-left"
+      >
+        <Image
+          src={screenShot.src}
+          alt="Phone Screenshot"
+          layout="fill"
+          objectFit="cover"
+          priority
+          className="absolute"
+        />
+      </div>
+      <div
+        className="absolute inset-0 md:hidden bg-cover bg-center opacity-20 aspect-[1768/2504] w-full "
         style={{ backgroundImage: `url(${rectangle.src})` }}
       ></div>
 
       {/* Left Section - Content */}
       <div
-        className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left relative z-10"
+        className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left relative z-10 mt-10 md:mt-0"
         data-aos="fade-up"
       >
-        <span className="font-base text-5xl font-bold text-blue-600">
-          METEO VIET
+        <span className="font-banner text-5xl font-bold text-blue-600">
+          METEOVIET
         </span>
         <span className="font-base text-lg font-medium mt-6 text-body-primary">
           Kết Nối Dữ Liệu, Dự Báo Chính Xác, Chủ Động Tương Lai
         </span>
 
-        <TextReveal className="mt-1 text-body-secondary font-base body-large-regular flex-wrap">
-          Giải pháp dự báo thời tiết & khí tượng thủy văn tiên tiến, giúp bạn
-          nắm bắt thông tin nhanh chóng và chính xác.
+        <TextReveal className="mt-1 text-body-secondary font-base body-large-regular flex-wrap text-center md:text-left flex justify-center items-center md:justify-start">
+          Giải pháp dự báo thời tiết & khí tượng thủy văn hiện đại, giúp bạn nắm
+          bắt thông tin nhanh chóng và chính xác.
         </TextReveal>
 
         <div className="mt-6 flex justify-center md:justify-start gap-4">
-          <button className="px-6 py-3 bg-blue-600 text-white shadow-md rounded-full body-large-medium transition-all duration-300 transform hover:bg-blue-700 hover:scale-105">
-            <Link
-              to="features"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer "
-            >
-              Tính năng
-            </Link>
+          <button
+            className="px-6 py-3 bg-blue-600 text-white shadow-md rounded-full body-large-medium transition-all duration-300 transform hover:bg-blue-700 hover:scale-105 font-base"
+            onClick={() =>
+              window.open("https://zalo.me/4417416028415695579", "_blank")
+            }
+          >
+            Trải nghiệm ngay
           </button>
-          <button className="px-6 py-3 border border-blue-600 text-blue-600 shadow-md rounded-full body-large-medium transition-all duration-300 hover:bg-blue-600 hover:text-white hover:scale-105">
+          <button className="px-6 py-3 border border-blue-600 text-blue-600 shadow-md rounded-full body-large-medium transition-all duration-300 hover:bg-blue-600 hover:text-white hover:scale-105 font-base">
             <Link
               to="guide"
               smooth={true}
@@ -69,7 +80,7 @@ const TopBanner = () => {
       </div>
 
       {/* Right Section - Phone Image */}
-      <div className="hidden md:block md:w-1/2 relative aspect-[1768/2504] lg:flex items-center justify-center">
+      <div className="hidden md:w-1/2 relative aspect-[1768/2504] md:flex items-center justify-center">
         <Image
           src={rectangle.src}
           alt="Phone Background"

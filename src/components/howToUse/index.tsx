@@ -36,12 +36,20 @@ const UserGuide = () => {
   }, []);
 
   return (
-    <section className="w-full max-w-screen-xl mx-auto p-6">
+    <section className="w-full max-w-screen-xl mx-auto p-6 pt-0 font-base">
+      <div className="text-center mb-10" data-aos="fade-up">
+        <h2 className="text-3xl font-bold text-gray-900">Hướng dẫn sử dụng</h2>
+        <p className="mt-2 text-gray-600 text-lg">
+          Chỉ với 3 bước đơn giản để bắt đầu nhận cảnh báo thời tiết chính xác
+          trên Zalo
+        </p>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {steps.map((step, index) => (
           <div
             key={index}
-            className="flex flex-col items-center text-center "
+            className="flex flex-col items-center text-center"
             data-aos={animation}
           >
             <Image

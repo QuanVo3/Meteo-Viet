@@ -34,7 +34,7 @@ export default function Header() {
     >
       <div className="w-full max-w-screen-xl mx-auto flex items-center justify-between p-4 px-6 md:px-8">
         <Link to="home" smooth={true} duration={500} className="cursor-pointer">
-          <span className="text-4xl font-bold text-blue-600 font-base">
+          <span className="text-4xl font-extrabold text-blue-600 font-banner">
             METEOVIET
           </span>
         </Link>
@@ -71,6 +71,14 @@ export default function Header() {
           >
             Liên hệ
           </Link>
+          <div
+            className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium"
+            onClick={() =>
+              window.open("https://zalo.me/4417416028415695579", "_blank")
+            }
+          >
+            Trải nghiệm ngay
+          </div>
         </nav>
         <button
           className="md:hidden p-2 text-gray-700"
@@ -118,6 +126,14 @@ export default function Header() {
           >
             Liên hệ
           </Link>
+          <div
+            className="cursor-pointer text-gray-700 hover:text-blue-600"
+            onClick={() =>
+              window.open("https://zalo.me/4417416028415695579", "_blank")
+            }
+          >
+            Trải nghiệm ngay
+          </div>
         </div>
       )}
     </header>

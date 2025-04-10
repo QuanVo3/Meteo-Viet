@@ -24,7 +24,8 @@ body {
 }
 
 @theme inline {
-  --font-base: var(--font-poppins);
+  --font-base: var(--font-nunito);
+  --font-banner: var(--font-poppins);
 }
 
 @layer components {
