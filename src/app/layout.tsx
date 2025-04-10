@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins,Nunito } from "next/font/google";
+import { Poppins, Nunito } from "next/font/google";
 import "./globals.css";
 import Header from "@/src/components/header";
 
@@ -28,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${nunito.variable} antialiased bg-[#ffffff]  h-full`}
+        className={` ${
+          (nunito.variable, poppins.variable)
+        } antialiased bg-[#ffffff]  h-full`}
       >
         {" "}
         {/* Không cần font-poppins ở đây */}

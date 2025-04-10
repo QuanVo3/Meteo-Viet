@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FaFacebookF, FaEnvelope, FaPhone, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaEnvelope, FaYoutube } from "react-icons/fa";
 
 const AboutUsCTA = () => {
   return (
