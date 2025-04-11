@@ -57,7 +57,7 @@ const UserGuide = () => {
               alt={`Step ${index + 1}`}
               width={228}
               height={228}
-              className="mb-4 md:w-68 md:h-102 w-full object-contain"
+              className="mb-4 md:w-68 md:h-102 w-full object-contain rounded-md"
             />
             <p className="text-gray-800 text-lg font-medium">{step.text}</p>
           </div>
