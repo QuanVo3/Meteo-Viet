@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import rectangle from "@/src/assets/static/background/Rectangle.png";
-import screenShot from "../../../public/assets/image/screeenShot.png";
+import screenShot from "../../../public/assets/image/screenShot.png";
 import TextReveal from "../fadeInText";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -23,7 +23,7 @@ const TopBanner = () => {
     <div className="w-full max-w-screen-xl mx-auto flex flex-col md:flex-row items-center p-6 relative">
       {/* Background for Mobile */}
       <div
-        className=" aspect-[2860/5632] w-1/2 md:hidden relative z-20"
+        className=" aspect-[1477/2976] w-1/2 md:hidden relative z-20"
         data-aos="fade-left"
       >
         <Image
@@ -88,7 +88,12 @@ const TopBanner = () => {
           objectFit="cover"
           priority
         />
-        <div className="absolute aspect-[2860/5632] w-1/2" data-aos="fade-left">
+
+        <div
+          className="hidden md:w-1/2 relative aspect-[1768/2504] md:flex items-center justify-center "
+          style={{ backgroundImage: `url(${rectangle.src})` }}
+        ></div>
+        <div className="absolute aspect-[1477/2976] w-1/2" data-aos="fade-left">
           <Image
             src={screenShot.src}
             alt="Phone Screenshot"
