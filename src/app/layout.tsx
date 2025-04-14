@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from "next";
 import { Poppins, Nunito } from "next/font/google";
 import "./globals.css";
@@ -28,9 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${
-          (nunito.variable, poppins.variable)
-        } antialiased bg-[#ffffff]  h-full`}
+        className={` ${nunito.variable} ${poppins.variable} antialiased bg-[#ffffff]  h-full`}
       >
         {" "}
         {/* Không cần font-poppins ở đây */}

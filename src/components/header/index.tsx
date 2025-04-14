@@ -43,7 +43,7 @@ export default function Header() {
             to="home"
             smooth={true}
             duration={500}
-            className="cursor-pointer text-body-primary text-gray-700 hover:text-blue-600 body-large-medium"
+            className="cursor-pointer text-body-primary text-gray-700 hover:text-blue-600 body-large-medium font-base"
           >
             Trang chủ
           </Link>
@@ -51,7 +51,7 @@ export default function Header() {
             to="features"
             smooth={true}
             duration={500}
-            className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium"
+            className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium font-base"
           >
             Tính năng
           </Link>
@@ -59,7 +59,7 @@ export default function Header() {
             to="guide"
             smooth={true}
             duration={500}
-            className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium"
+            className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium font-base"
           >
             Hướng dẫn
           </Link>
@@ -67,12 +67,12 @@ export default function Header() {
             to="about"
             smooth={true}
             duration={500}
-            className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium"
+            className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium font-base"
           >
             Liên hệ
           </Link>
           <div
-            className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium"
+            className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium font-base"
             onClick={() =>
               window.open("https://zalo.me/4417416028415695579", "_blank")
             }
@@ -89,12 +89,12 @@ export default function Header() {
       </div>
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white shadow-md absolute top-full left-0 w-full p-4 flex flex-col space-y-4">
+        <div className="md:hidden bg-white shadow-md absolute top-full left-0 w-full p-4 flex flex-col space-y-4 font-base">
           <Link
             to="home"
             smooth={true}
             duration={500}
-            className="cursor-pointer text-gray-700 hover:text-blue-600"
+            className="cursor-pointer text-gray-700 hover:text-blue-600 "
             onClick={() => setMenuOpen(false)}
           >
             Trang chủ

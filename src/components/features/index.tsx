@@ -66,7 +66,7 @@ const AppFeatures = () => {
                 className="w-12 h-12 md:w-16 md:h-16 shrink-0"
               />
             </div>
-            <span className="text-gray-800 text-base md:text-lg font-semibold md:text-center ml-4 md:ml-0 whitespace-pre-line">
+            <span className="text-gray-800  md:text-lg font-semibold md:text-center ml-4 md:ml-0 whitespace-pre-line font-base">
               {feature.title}
             </span>
           </div>
