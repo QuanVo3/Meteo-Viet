@@ -35,10 +35,15 @@ const TopBanner = () => {
           className="absolute"
         />
       </div>
-      <div
-        className="absolute inset-0 md:hidden bg-cover bg-center opacity-20 aspect-[1768/2504] w-full "
-        style={{ backgroundImage: `url(${rectangle.src})` }}
-      ></div>
+
+      <Image
+        src={rectangle.src}
+        alt="Phone Background"
+        layout="fill"
+        objectFit="cover"
+        priority
+        className="absolute inset-0 flex md:hidden bg-cover bg-center opacity-20 aspect-[1768/2504] w-full "
+      />
 
       {/* Left Section - Content */}
       <div
@@ -90,10 +95,9 @@ const TopBanner = () => {
         />
 
         <div
-          className="hidden md:w-1/2 relative aspect-[1768/2504] md:flex items-center justify-center "
-          style={{ backgroundImage: `url(${rectangle.src})` }}
-        ></div>
-        <div className="absolute aspect-[1477/2976] w-1/2" data-aos="fade-left">
+          className="absolute aspect-[1477/2976] w-1/2 "
+          data-aos="fade-left"
+        >
           <Image
             src={screenShot.src}
             alt="Phone Screenshot"
