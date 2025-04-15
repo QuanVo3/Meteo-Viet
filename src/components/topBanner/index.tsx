@@ -50,7 +50,7 @@ const TopBanner = () => {
         className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left relative z-10 mt-10 md:mt-0"
         data-aos="fade-up"
       >
-        <span className="font-banner text-5xl font-bold text-blue-600">
+        <span className="font-banner text-5xl font-bold text-blue-600 hidden md:block">
           METEOVIET
         </span>
         <span className="font-base text-lg font-medium mt-6 text-body-primary">

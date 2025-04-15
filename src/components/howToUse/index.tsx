@@ -7,15 +7,15 @@ import Info from "@/src/assets/static/image/info.png";
 const steps = [
   {
     image: QrScan,
-    text: "Bước 1: Quét QR code hoặc tìm kiếm MeteoViet trên Zalo",
+    text: "Quét QR code hoặc tìm kiếm MeteoViet trên Zalo",
   },
   {
     image: Allow,
-    text: "Bước 2: Cho phép truy cập vị trí",
+    text: "Dự báo theo vị trí chính xác, thời gian thực",
   },
   {
     image: Info,
-    text: "Bước 3: Nhận cảnh báo và cập nhật dự báo mỗi ngày",
+    text: "Nhận cảnh báo và cập nhật dự báo mỗi ngày",
   },
 ];
 

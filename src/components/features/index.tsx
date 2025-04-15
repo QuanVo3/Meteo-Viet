@@ -11,21 +11,21 @@ import mobileInterface from "@/src/assets/static/icon/interface.png";
 const features = [
   {
     icon: weather,
-    title: "- Dự báo thời tiết siêu chính xác\n - Dữ liệu cập nhật từng giờ",
+    title: "- Dự báo thời tiết chính xác\n - Dữ liệu cập nhật từng giờ",
   },
   {
     icon: warning,
     title:
-      "- Cảnh báo thiên tai, mưa lũ, triều cường\n - Chủ động bảo vệ tài sản & con người.",
+      "- Cảnh báo thiên tai, mưa lũ, \ntriều cường\n - Chủ động bảo vệ tài sản & \ncon người.",
   },
   {
     icon: water,
     title:
-      "- Theo dõi dữ liệu thủy văn & mực nước\n - Quan trọng cho người dân & doanh nghiệp.",
+      "- Theo dõi dữ liệu thủy văn & \nmực nước\n - Quan trọng cho người dân & \ndoanh nghiệp.",
   },
   {
     icon: mobileInterface,
-    title: "- Giao diện thân thiện, dễ sử dụng\n - Ai cũng có thể tiếp cận",
+    title: "- Giao diện thân thiện,\n dễ sử dụng\n - Ai cũng có thể tiếp cận",
   },
 ];
 
