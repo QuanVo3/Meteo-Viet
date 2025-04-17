@@ -43,7 +43,7 @@ const UserGuide = () => {
   }, []);
 
   return (
-    <section className="w-full px-4 py-12 md:py-20 font-base bg-gradient-to-b from-indigo-50 via-white to-blue-50">
+    <section className="w-full px-4  py-12 md:py-20 font-base bg-gradient-to-b from-indigo-50 via-white to-blue-50">
       <div className="max-w-screen-xl mx-auto">
         {/* Title */}
         <div className="text-center mb-12" data-aos="fade-up">
@@ -65,7 +65,7 @@ const UserGuide = () => {
               data-aos={animation}
             >
               {/* Step Number Indicator */}
-              <div className="absolute -top-4 -left-4 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-lg">
+              <div className="absolute hidden md:flex -top-4 -left-4 bg-blue-600 text-white w-10 h-10 rounded-full  items-center justify-center font-bold shadow-lg">
                 {index + 1}
               </div>
 
