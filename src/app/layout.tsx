@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Poppins, Nunito } from "next/font/google";
 import "./globals.css";
 import Header from "@/src/components/header";
+import FloatButton from "../components/floatButton";
 
 export const metadata: Metadata = {
   title: "Meteo Viet",
@@ -34,6 +35,7 @@ export default function RootLayout({
         {" "}
         {/* Không cần font-poppins ở đây */}
         <Header />
+        <FloatButton />
         {children}
       </body>
     </html>

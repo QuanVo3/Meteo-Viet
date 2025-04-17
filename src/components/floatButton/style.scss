@@ -1,0 +1,55 @@
+.float-button-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.float-button-wrapper.hidden {
+  transform: translateX(120%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.float-button-wrapper.visible {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.float-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: white;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.youtube {
+  background-color: #ff0000;
+  color: white;
+}
+
+.facebook {
+  background-color: #1877f2;
+  color: white;
+}
+
+.zalo {
+  background-color: #0084ff;
+  color: white;
+}

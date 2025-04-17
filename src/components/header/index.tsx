@@ -29,7 +29,7 @@ export default function Header() {
   return (
     <header
       className={clsx(
-        "fixed top-0 left-0 w-full z-50 transition-transform duration-500",
+        "fixed top-0 left-0 w-full z-50 transition-transform duration-500 bg-[#0063AE]/75",
         hidden ? "-translate-y-full" : "translate-y-0"
       )}
     >

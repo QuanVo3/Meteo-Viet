@@ -17,7 +17,7 @@ const features = [
   {
     icon: storm,
     title:
-      "- Cảnh báo thiên tai, mưa lũ,\ntriều cường\n- Chủ động bảo vệ tài sản & con người.",
+      "- Cảnh báo thiên tai, mưa lũ, triều cường\n- Chủ động bảo vệ tài sản & con người.",
   },
   {
     icon: flood,
@@ -72,7 +72,7 @@ const AppFeatures = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <p className="text-gray-800 text-sm md:text-base whitespace-pre-line leading-relaxed font-medium">
+              <p className="text-gray-800 md:text-lg font-medium  whitespace-pre-line leading-relaxed ">
                 {feature.title}
               </p>
             </div>
