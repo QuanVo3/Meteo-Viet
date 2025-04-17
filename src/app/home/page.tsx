@@ -5,7 +5,7 @@ import TopBanner from "@/src/components/topBanner";
 
 export default function Home() {
   return (
-    <div className="h-full w-full flex flex-col bg-[#ffffff] space-y-10 md:space-y-16 lg:space-y-24 overflow-hidden">
+    <div className="h-full w-full flex flex-col bg-[#ffffff]  overflow-hidden">
       <div id="home">
         <TopBanner />
       </div>

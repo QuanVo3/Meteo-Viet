@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import clsx from "clsx";
+import "./style.scss"; // SCSS chứa style cho mobile dropdown
 
 export default function Header() {
   const [hidden, setHidden] = useState(false);
@@ -28,114 +29,81 @@ export default function Header() {
   return (
     <header
       className={clsx(
-        "sticky top-0 left-0 w-full bg-white transition-transform duration-500 z-50",
+        "fixed top-0 left-0 w-full z-50 transition-transform duration-500",
         hidden ? "-translate-y-full" : "translate-y-0"
       )}
     >
-      <div className="w-full max-w-screen-xl mx-auto flex items-center justify-between p-4 px-6 md:px-8">
-        <Link to="home" smooth={true} duration={500} className="cursor-pointer">
-          <span className="text-4xl font-extrabold text-blue-600 font-banner">
-            METEOVIET
-          </span>
-        </Link>
-        <nav className="hidden md:flex space-x-6">
+      <div className="backdrop-blur-md bg-white/10 shadow-md">
+        <div className="w-full max-w-screen-xl mx-auto flex items-center justify-between px-4 md:px-8 py-3">
           <Link
             to="home"
             smooth={true}
             duration={500}
-            className="cursor-pointer text-body-primary text-gray-700 hover:text-blue-600 body-large-medium font-base"
+            className="cursor-pointer"
           >
-            Trang chủ
+            <span className="text-2xl md:text-3xl font-extrabold tracking-wide text-white font-banner animate-bounce-slow">
+              METEOVIET
+            </span>
           </Link>
-          <Link
-            to="features"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium font-base"
+
+          <nav className="hidden md:flex space-x-6 items-center text-white text-md font-medium">
+            {["home", "features", "guide", "about"].map((item, i) => (
+              <Link
+                key={item}
+                to={item}
+                smooth={true}
+                duration={500}
+                className="cursor-pointer hover:underline underline-offset-4 transition-all hover:text-blue-100"
+              >
+                {["Trang chủ", "Tính năng", "Hướng dẫn", "Liên hệ"][i]}
+              </Link>
+            ))}
+            <div
+              className="bg-white text-blue-500 font-semibold px-4 py-2 rounded-full hover:bg-blue-100 transition-all cursor-pointer"
+              onClick={() =>
+                window.open("https://zalo.me/4417416028415695579", "_blank")
+              }
+            >
+              Trải nghiệm ngay
+            </div>
+          </nav>
+
+          <button
+            className="md:hidden p-2 text-white text-2xl"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
           >
-            Tính năng
-          </Link>
-          <Link
-            to="guide"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium font-base"
-          >
-            Hướng dẫn
-          </Link>
-          <Link
-            to="about"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium font-base"
-          >
-            Liên hệ
-          </Link>
-          <div
-            className="cursor-pointer text-gray-700 hover:text-blue-600 body-large-medium font-base"
-            onClick={() =>
-              window.open("https://zalo.me/4417416028415695579", "_blank")
-            }
-          >
-            Trải nghiệm ngay
-          </div>
-        </nav>
-        <button
-          className="md:hidden p-2 text-gray-700"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          ☰
-        </button>
-      </div>
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-white shadow-md absolute top-full left-0 w-full p-4 flex flex-col space-y-4 font-base">
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer text-gray-700 hover:text-blue-600 "
-            onClick={() => setMenuOpen(false)}
-          >
-            Trang chủ
-          </Link>
-          <Link
-            to="features"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer text-gray-700 hover:text-blue-600"
-            onClick={() => setMenuOpen(false)}
-          >
-            Tính năng
-          </Link>
-          <Link
-            to="guide"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer text-gray-700 hover:text-blue-600"
-            onClick={() => setMenuOpen(false)}
-          >
-            Hướng dẫn
-          </Link>
-          <Link
-            to="about"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer text-gray-700 hover:text-blue-600"
-            onClick={() => setMenuOpen(false)}
-          >
-            Liên hệ
-          </Link>
-          <div
-            className="cursor-pointer text-gray-700 hover:text-blue-600"
-            onClick={() =>
-              window.open("https://zalo.me/4417416028415695579", "_blank")
-            }
-          >
-            Trải nghiệm ngay
-          </div>
+            ☰
+          </button>
         </div>
-      )}
+
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <div className="mobile-menu open">
+            {["home", "features", "guide", "about"].map((item, i) => (
+              <Link
+                key={item}
+                to={item}
+                smooth={true}
+                duration={500}
+                className="mobile-link"
+                onClick={() => setMenuOpen(false)}
+              >
+                {["Trang chủ", "Tính năng", "Hướng dẫn", "Liên hệ"][i]}
+              </Link>
+            ))}
+            <div
+              className="mobile-cta"
+              onClick={() => {
+                setMenuOpen(false);
+                window.open("https://zalo.me/4417416028415695579", "_blank");
+              }}
+            >
+              Trải nghiệm ngay
+            </div>
+          </div>
+        )}
+      </div>
     </header>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import rectangle from "@/src/assets/static/background/Rectangle.png";
+import heroBg from "@/src/assets/static/background/HeroSection.png";
 import screenShot from "../../../public/assets/image/screenShot.png";
 import TextReveal from "../fadeInText";
 import AOS from "aos";
@@ -12,100 +12,99 @@ import { Link } from "react-scroll";
 const TopBanner = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      offset: 50, // Offset before the animation triggers
-      easing: "ease-in-out", // Easing function
-      once: true, // Whether animation should happen only once
+      duration: 1000,
+      offset: 50,
+      easing: "ease-in-out",
+      once: true,
     });
   }, []);
 
   return (
-    <div className="w-full max-w-screen-xl mx-auto flex flex-col md:flex-row items-center p-6 relative">
-      {/* Background for Mobile */}
-      <div
-        className=" aspect-[1477/2976] w-1/2 md:hidden relative z-20"
-        data-aos="fade-left"
-      >
-        <Image
-          src={screenShot.src}
-          alt="Phone Screenshot"
-          layout="fill"
-          objectFit="cover"
-          priority
-          className="absolute"
-        />
-      </div>
-
+    <div className="relative w-full bg-cover bg-center bg-no-repeat text-white">
+      {/* Background image */}
       <Image
-        src={rectangle.src}
-        alt="Phone Background"
+        src={heroBg.src}
+        alt="Background"
         layout="fill"
         objectFit="cover"
-        priority
-        className="absolute inset-0 flex md:hidden bg-cover bg-center opacity-20 aspect-[1768/2504] w-full "
+        quality={100}
+        className="z-0"
       />
+      {/* Overlay to enhance text contrast */}
+      <div className="absolute inset-0 bg-blue-900/50 z-10" />
 
-      {/* Left Section - Content */}
-      <div
-        className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left relative z-10 mt-10 md:mt-0"
-        data-aos="fade-up"
-      >
-        <span className="font-banner text-5xl font-bold text-blue-600 hidden md:block">
-          METEOVIET
-        </span>
-        <span className="font-base text-lg font-medium mt-6 text-body-primary">
-          Kết Nối Dữ Liệu, Dự Báo Chính Xác, Chủ Động Tương Lai
-        </span>
-
-        <TextReveal className="mt-1 text-body-secondary font-base body-large-regular flex-wrap text-center md:text-left flex justify-center items-center md:justify-start">
-          Giải pháp dự báo thời tiết & khí tượng thủy văn hiện đại, giúp bạn nắm
-          bắt thông tin nhanh chóng và chính xác.
-        </TextReveal>
-
-        <div className="mt-6 flex justify-center md:justify-start gap-4">
-          <button
-            className="px-6 py-3 bg-blue-600 text-white shadow-md rounded-full body-large-medium transition-all duration-300 transform hover:bg-blue-700 hover:scale-105 font-base"
-            onClick={() =>
-              window.open("https://zalo.me/4417416028415695579", "_blank")
-            }
-          >
-            Trải nghiệm ngay
-          </button>
-          <button className="px-6 py-3 border border-blue-600 text-blue-600 shadow-md rounded-full body-large-medium transition-all duration-300 hover:bg-blue-600 hover:text-white hover:scale-105 font-base">
-            <Link
-              to="guide"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer"
-            >
-              Hướng dẫn
-            </Link>
-          </button>
-        </div>
-      </div>
-
-      {/* Right Section - Phone Image */}
-      <div className="hidden md:w-1/2 relative aspect-[1768/2504] md:flex items-center justify-center">
-        <Image
-          src={rectangle.src}
-          alt="Phone Background"
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
-
+      <div className="relative z-20 max-w-screen-xl mx-auto flex flex-col md:flex-row items-center p-6 md:py-24 ">
+        {/* Left section */}
         <div
-          className="absolute aspect-[1477/2976] w-1/2 "
+          className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left"
+          data-aos="fade-right"
+        >
+          <div
+            className="md:hidden flex md:w-1/2 justify-center items-center mt-20 md:mt-0"
+            data-aos="fade-left"
+          >
+            <div className="relative w-1/2 aspect-[1477/2976]">
+              <Image
+                src={screenShot.src}
+                alt="Phone Screenshot"
+                layout="fill"
+                objectFit="contain"
+                className="rounded-xl shadow-2xl"
+              />
+            </div>
+          </div>
+          <span className="font-banner text-4xl md:text-5xl font-extrabold text-white hidden md:flex">
+            METEOVIET
+          </span>
+
+          <span className="font-base text-xl md:text-2xl font-semibold mt-4 text-white flex-wrap">
+            Kết Nối Dữ Liệu, Dự Báo Chính Xác,
+            <br /> Chủ Động Tương Lai
+          </span>
+
+          <TextReveal className="mt-3 text-white font-base text-base md:text-lg max-w-xl mx-auto md:mx-0 flex-wrap">
+            Giải pháp dự báo thời tiết & khí tượng thủy văn hiện đại, giúp bạn
+            nắm bắt thông tin nhanh chóng và chính xác.
+          </TextReveal>
+
+          <div className="mt-6 flex justify-center md:justify-start gap-4">
+            <button
+              className="px-6 py-3 bg-white text-blue-600 shadow-lg rounded-full font-semibold transition-all duration-300 transform hover:bg-gray-100 hover:scale-105"
+              onClick={() =>
+                window.open("https://zalo.me/4417416028415695579", "_blank")
+              }
+            >
+              Trải nghiệm ngay
+            </button>
+            <button className="px-6 py-3 border border-white text-white rounded-full font-semibold transition-all duration-300 hover:bg-white hover:text-blue-600 hover:scale-105">
+              <Link
+                to="guide"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer"
+              >
+                Hướng dẫn
+              </Link>
+            </button>
+          </div>
+        </div>
+
+        {/* Right section */}
+        <div
+          className="hidden md:flex md:w-1/2 justify-center items-center mt-10 md:mt-0 
+          
+          "
           data-aos="fade-left"
         >
-          <Image
-            src={screenShot.src}
-            alt="Phone Screenshot"
-            layout="fill"
-            objectFit="cover"
-            priority
-            className="absolute"
-          />
+          <div className="relative w-[260px] aspect-[1477/2976]">
+            <Image
+              src={screenShot.src}
+              alt="Phone Screenshot"
+              layout="fill"
+              objectFit="contain"
+              className="rounded-[40] shadow-2xl"
+            />
+          </div>
         </div>
       </div>
     </div>

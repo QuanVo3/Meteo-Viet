@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${nunito.variable} ${poppins.variable} antialiased bg-[#ffffff]  h-full`}
+        className={` ${nunito.variable} ${poppins.variable} antialiased bg-white font-base h-full`}
       >
         {" "}
         {/* Không cần font-poppins ở đây */}
