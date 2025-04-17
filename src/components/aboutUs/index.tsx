@@ -91,8 +91,7 @@ const AboutUsCta: React.FC = () => {
 
       {/* Bottom note */}
       <div className="border-t border-white/30 mt-10 pt-6 text-center text-xs text-white/80 px-4">
-        © 2024 MeteoViet. Một sản phẩm hợp tác Trung tâm Khí tượng Thủy Văn Nam
-        bộ và KKC Communication.
+        © 2025 MeteoViet. Đài Khí Tượng Thủy Văn Nam Bộ và Tây Nguyên
       </div>
     </footer>
   );
