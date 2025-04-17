@@ -31,7 +31,7 @@ const TopBanner = () => {
         className="z-0"
       />
       {/* Overlay to enhance text contrast */}
-      <div className="absolute inset-0 bg-[#0063AE]/50 z-10" />
+      <div className="absolute inset-0 bg-[#0063AE]/75 z-10" />
 
       <div className="relative z-20 max-w-screen-xl mx-auto flex flex-col md:flex-row items-center p-6 md:py-24 ">
         {/* Left section */}
@@ -69,14 +69,14 @@ const TopBanner = () => {
 
           <div className="mt-6 flex justify-center md:justify-start gap-4">
             <button
-              className="px-6 py-3 bg-white text-blue-600 shadow-lg rounded-full font-semibold transition-all duration-300 transform hover:bg-gray-100 hover:scale-105"
+              className="px-6 py-3 bg-white text-[#0063AE] shadow-lg rounded-full font-semibold transition-all duration-300 transform hover:bg-gray-100 hover:scale-105"
               onClick={() =>
                 window.open("https://zalo.me/4417416028415695579", "_blank")
               }
             >
               Trải nghiệm ngay
             </button>
-            <button className="px-6 py-3 border border-white text-white rounded-full font-semibold transition-all duration-300 hover:bg-white hover:text-blue-600 hover:scale-105">
+            <button className="px-6 py-3 border border-white text-white rounded-full font-semibold transition-all duration-300 hover:bg-white hover:text-[#0063AE] hover:scale-105">
               <Link
                 to="guide"
                 smooth={true}
