@@ -31,7 +31,7 @@ const TopBanner = () => {
         className="z-0"
       />
       {/* Overlay to enhance text contrast */}
-      <div className="absolute inset-0 bg-blue-900/50 z-10" />
+      <div className="absolute inset-0 bg-[#0063AE]/50 z-10" />
 
       <div className="relative z-20 max-w-screen-xl mx-auto flex flex-col md:flex-row items-center p-6 md:py-24 ">
         {/* Left section */}

@@ -13,7 +13,7 @@ const AboutUsCta: React.FC = () => {
   }, []);
 
   return (
-    <footer className="bg-gradient-to-b from-[#0052A0] to-[#007BBA] text-white py-10 font-base shadow-inner shadow-blue-800/30">
+    <footer className="bg-gradient-to-b from-[#0063AE] to-[#0063AE]/75 text-white py-10 font-base shadow-inner shadow-blue-800/30">
       <div
         className="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 text-sm md:text-base text-center md:text-left"
         data-aos="fade-up"
