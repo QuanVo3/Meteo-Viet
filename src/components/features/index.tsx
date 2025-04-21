@@ -87,7 +87,7 @@ const AppFeatures = () => {
             rel="noopener noreferrer"
             className="bg-gradient-to-r to-[#0063AE] from-[#0063AE]/75 hover:brightness-110 text-white text-base md:text-lg font-semibold py-3 px-8 rounded-full shadow-lg transition-all duration-300"
           >
-            🚀 Trải nghiệm ngay trên Zalo!
+            🚀 Trải nghiệm ngay !
           </a>
         </div>
       </div>

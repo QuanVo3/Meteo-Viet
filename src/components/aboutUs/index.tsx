@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { Mail, Globe, Facebook, MessageCircle } from "lucide-react";
+import { Mail, Facebook, MessageCircle, Youtube } from "lucide-react";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -54,14 +54,14 @@ const AboutUsCta: React.FC = () => {
               </a>
             </li>
             <li className="flex items-center gap-2">
-              <Globe className="w-5 h-5 text-white/90" />
+              <Youtube className="w-5 h-5 text-white/90" />
               <a
-                href="https://meteoviet.vn"
+                href="https://www.youtube.com/@MeteoViet"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                Website chính thức
+                Youtube
               </a>
             </li>
             <li className="flex items-center gap-2">
