@@ -54,7 +54,7 @@ const TopBanner = () => {
             </div>
           </div>
           <span className="font-banner text-4xl md:text-5xl font-extrabold text-white hidden md:flex">
-            METEOVIET
+            MeteoViet
           </span>
 
           <span className="font-base text-xl md:text-2xl font-semibold mt-4 text-white flex-wrap">

@@ -42,7 +42,7 @@ export default function Header() {
             className="cursor-pointer"
           >
             <span className="text-2xl md:text-3xl font-extrabold tracking-wide text-white font-banner animate-bounce-slow">
-              METEOVIET
+              MeteoViet
             </span>
           </Link>
 
