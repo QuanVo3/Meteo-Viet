@@ -43,13 +43,12 @@ const TopBanner = () => {
             className="md:hidden flex md:w-1/2 justify-center items-center mt-20 md:mt-0"
             data-aos="fade-left"
           >
-            <div className="relative w-1/2 aspect-[1477/2976]">
+            <div className="relative w-1/2 aspect-[1464/2978]">
               <Image
                 src={screenShot.src}
                 alt="Phone Screenshot"
                 layout="fill"
                 objectFit="contain"
-                className="rounded-xl shadow-2xl"
               />
             </div>
           </div>
@@ -96,13 +95,12 @@ const TopBanner = () => {
           "
           data-aos="fade-left"
         >
-          <div className="relative w-[260px] aspect-[1477/2976]">
+          <div className="relative w-[260px] aspect-[1464/2978]">
             <Image
               src={screenShot.src}
               alt="Phone Screenshot"
               layout="fill"
               objectFit="contain"
-              className="rounded-[40] shadow-2xl"
             />
           </div>
         </div>
