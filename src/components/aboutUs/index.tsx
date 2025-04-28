@@ -39,7 +39,7 @@ const AboutUsCta: React.FC = () => {
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                Zalo Official Account
+                Zalo OA
               </a>
             </li>
             <li className="flex items-center gap-2">
