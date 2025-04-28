@@ -50,7 +50,7 @@ const AboutUsCta: React.FC = () => {
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                Fanpage Facebook
+                Fanpage
               </a>
             </li>
             <li className="flex items-center gap-2">
